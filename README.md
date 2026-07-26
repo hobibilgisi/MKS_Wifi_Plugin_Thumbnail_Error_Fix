@@ -1,7 +1,16 @@
 # MKS WiFi Plugin — Önizleme Düzeltmesi / Preview Fix
 
+> 🖨️ **Bu proje 3D yazıcılar içindir / This is for 3D printers.**  
+> **TR:** 3D yazıcılarda bilgisayardaki tasarımı yazıcıya göndermek için "dilimleyici" (slicer) yazılım kullanılır. Bu depo, **Ultimaker Cura** dilimleyicisi için yazılmış olan **MKS WiFi eklentisi**'ndeki bir hatayı düzeltir. Hata: yazıcının LCD ekranında **model önizleme resmi** (thumbnail) hiç görünmüyordu. Bu yamayla artık yazıcı ekranında hangi modeli bastığını görebilirsin.  
+> **EN:** 3D printers use "slicer" software to prepare a design for printing. This repo fixes a bug in the **MKS WiFi Plugin** for the **Ultimaker Cura** slicer where the **preview thumbnail** never appeared on the printer's LCD screen. With this patch you can finally see which model is being printed on the printer's display.
+
+> 🤖 **Vibe coding / AI-assisted — Açık Bildirim / Full Disclosure**  
+> **TR:** Bu düzeltmedeki kök neden analizi, kod yamaları ve dökümantasyon **AI destekli "vibe coding"** ile üretildi (GitHub Copilot + Claude). İnsan (@hobibilgisi) sorunu tanımladı, testleri gerçek donanımda (MKS Robin Nano + Bluer) yaptı, sonuçları doğruladı. AI, kod aramasını, kok neden hipotezlerini ve yamaları yazdı.  
+> **EN:** The root-cause analysis, code patches and documentation in this fix were produced through **AI-assisted "vibe coding"** (GitHub Copilot + Claude). A human (@hobibilgisi) defined the problem, ran the tests on real hardware (MKS Robin Nano + Bluer), and validated the results. The AI drove the code search, root-cause hypotheses and patch writing.
+
 - [Türkçe](#türkçe)
 - [English](#english)
+- [Credits & License](#credits--license)
 
 ---
 
@@ -50,3 +59,28 @@ Start Cura, slice a model, save or send over WiFi. The preview will appear on th
 > **Note:** You do **not** need to install anything from the Cura Marketplace — this folder already contains the full plugin (v1.4.6-dev + preview fix).
 
 **If something goes wrong:** see [detailed README](README_DETAILED.md) → "Quick self-check".
+
+---
+
+## Credits & License
+
+Bu proje, aşağıdaki açık kaynak projeye dayanan **değiştirilmiş bir dağıtımdır** /
+This project is a **modified redistribution** based on:
+
+- **[MKS WiFi Plugin](https://github.com/PrintMakerLab/mks-wifi-plugin)** — © 2021 Makerbase, Jeredian, Elkin-Vasily — AGPL-3.0.
+
+Bu depodaki tüm kod aynı **[AGPL-3.0](LICENSE)** lisansı altındadır /
+All code in this repository is released under the same **[AGPL-3.0](LICENSE)** license.
+
+Yapılan değişikliklerin ayrıntıları için / For full modification details see **[NOTICE.md](NOTICE.md)**.
+
+> **Ticari Markalar / Trademarks**  
+> "MKS", "MKS Robin Nano" — Makerbase; "Ultimaker Cura" — Ultimaker B.V.; "Marlin" — Marlin Firmware.  
+> Bu isimler yalnızca uyumluluk açıklamak için (nominative use) kullanılmıştır.  
+> **Bu proje Makerbase, Ultimaker ya da Marlin ile bağlantılı, sponsorlu veya onaylı DEĞİLDİR.**  
+> These names are used only to describe compatibility (nominative use).  
+> **This project is NOT affiliated with, sponsored by, or endorsed by Makerbase, Ultimaker, or Marlin.**
+
+> **Sorumluluk Reddi / Disclaimer**  
+> Yazılım "olduğu gibi" sunulmaktadır. Kullanıma bağlı olabilecek yazıcı arızası, veri kaybı vb. sorumluluğu kabul etmez.  
+> Software is provided "AS IS", without warranty of any kind. Use at your own risk.
